@@ -1,6 +1,6 @@
 package com.indeed.proctor.consumer;
 
-import com.google.common.base.Objects;
+import com.google.common.base.MoreObjects;
 import com.google.common.collect.Maps;
 import com.indeed.proctor.common.ProctorResult;
 import com.indeed.proctor.common.model.ConsumableTestDefinition;
@@ -114,7 +114,7 @@ public abstract class AbstractGroups {
             }
         }
 
-        return Objects.firstNonNull(payload, Payload.EMPTY_PAYLOAD);
+        return MoreObjects.firstNonNull(payload, Payload.EMPTY_PAYLOAD);
     }
 
 

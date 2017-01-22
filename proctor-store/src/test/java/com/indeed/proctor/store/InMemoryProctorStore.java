@@ -329,6 +329,11 @@ public class InMemoryProctorStore implements ProctorStore {
                     public boolean apply(@Nullable final RevisionAndTest revisionAndTest) {
                         return revisionAndTest.getTestName().equals(test);
                     }
+
+                    @Override
+                    public boolean test(@Nullable final RevisionAndTest revisionAndTest) {
+                        return apply(revisionAndTest);
+                    }
                 })
                 .transform(castToRevision)
                 .toList();
