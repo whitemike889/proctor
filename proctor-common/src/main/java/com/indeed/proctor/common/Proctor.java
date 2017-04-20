@@ -245,11 +245,6 @@ public class Proctor {
                 assert null != input;
                 return type == input.getTestDefinition().getTestType();
             }
-
-            @Override
-            public boolean test(TestChooser<?> input) {
-                return apply(input);
-            }
         });
     }
 
